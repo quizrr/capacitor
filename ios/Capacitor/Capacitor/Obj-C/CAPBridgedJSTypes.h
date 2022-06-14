@@ -6,6 +6,7 @@
 #import <Capacitor/Capacitor-Swift.h>
 
 @protocol BridgedJSValueContainerImplementation <NSObject>
+
 @required
 - (NSString * _Nullable)getString:(NSString * _Nonnull)key defaultValue:(NSString * _Nullable)defaultValue;
 - (NSDate * _Nullable)getDate:(NSString * _Nonnull)key defaultValue:(NSDate * _Nullable)defaultValue;
@@ -15,4 +16,5 @@
 @end
 
 @interface CAPPluginCall (BridgedJSProtocol) <BridgedJSValueContainerImplementation>
+
 @end

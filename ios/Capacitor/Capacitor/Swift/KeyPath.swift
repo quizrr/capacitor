@@ -3,6 +3,7 @@ import Foundation
 public struct KeyPath {
     var segments: [String]
     var isEmpty: Bool { return segments.isEmpty }
+    
     var path: String {
         return segments.joined(separator: ".")
     }
@@ -21,6 +22,7 @@ public struct KeyPath {
         guard !isEmpty else {
             return nil
         }
+        
         var paths = segments
         let head = paths.removeFirst()
         return (head, KeyPath(segments: paths))

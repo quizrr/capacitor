@@ -5,15 +5,18 @@
 @implementation UIStatusBarManager (CAPHandleTapAction)
 
 + (void)load {
+    
   static dispatch_once_t onceToken;
+    
   dispatch_once(&onceToken, ^{
     Class class = [self class];
+      
     SEL originalSelector = NSSelectorFromString(@"handleTapAction:");
     SEL swizzledSelector = @selector(nofity_handleTapAction:);
 
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
     Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-
+    
     BOOL didAddMethod = class_addMethod(class,
                                         originalSelector,
                                         method_getImplementation(swizzledMethod),

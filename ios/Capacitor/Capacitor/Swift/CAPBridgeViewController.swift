@@ -4,6 +4,7 @@ import Cordova
 
 @objc open class CAPBridgeViewController: UIViewController {
     private var capacitorBridge: CapacitorBridge?
+    
     public final var bridge: CAPBridgeProtocol? {
         return capacitorBridge
     }
@@ -13,11 +14,13 @@ import Cordova
     public var isStatusBarVisible = true
     public var statusBarStyle: UIStatusBarStyle = .default
     public var statusBarAnimation: UIStatusBarAnimation = .slide
+    
     @objc public var supportedOrientations: [Int] = []
 
     public lazy final var isNewBinary: Bool = {
         if let curVersionCode = Bundle.main.infoDictionary?["CFBundleVersion"] as? String,
            let curVersionName = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            
             if let lastVersionCode = UserDefaults.standard.string(forKey: "lastBinaryVersionCode"),
                let lastVersionName = UserDefaults.standard.string(forKey: "lastBinaryVersionName") {
                 return (curVersionCode.isEqual(lastVersionCode) == false || curVersionName.isEqual(lastVersionName) == false)
@@ -31,7 +34,9 @@ import Cordova
         // load the configuration and set the logging flag
         let configDescriptor = instanceDescriptor()
         let configuration = InstanceConfiguration(with: configDescriptor, isDebug: CapacitorBridge.isDevEnvironment)
+        
         CAPLog.enableLogging = configuration.loggingEnabled
+        
         logWarnings(for: configDescriptor)
 
         if configDescriptor.instanceType == .fixed {
@@ -44,9 +49,12 @@ import Cordova
         // get the web view
         let assetHandler = WebViewAssetHandler()
         assetHandler.setAssetPath(configuration.appLocation.path)
+        
         let delegationHandler = WebViewDelegationHandler()
         prepareWebView(with: configuration, assetHandler: assetHandler, delegationHandler: delegationHandler)
+        
         view = webView
+        
         // create the bridge
         capacitorBridge = CapacitorBridge(with: configuration,
                                           delegate: self,
@@ -59,6 +67,7 @@ import Cordova
     override open func viewDidLoad() {
         super.viewDidLoad()
         self.becomeFirstResponder()
+        
         loadWebView()
     }
 
@@ -77,6 +86,7 @@ import Cordova
      */
     open func instanceDescriptor() -> InstanceDescriptor {
         let descriptor = InstanceDescriptor.init()
+        
         if !isNewBinary && !descriptor.cordovaDeployDisabled {
             if let persistedPath = UserDefaults.standard.string(forKey: "serverBasePath"), !persistedPath.isEmpty {
                 if let libPath = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true).first {
@@ -87,6 +97,7 @@ import Cordova
                 }
             }
         }
+        
         return descriptor
     }
 
@@ -101,13 +112,16 @@ import Cordova
      */
     open func webViewConfiguration(for instanceConfiguration: InstanceConfiguration) -> WKWebViewConfiguration {
         let webViewConfiguration = WKWebViewConfiguration()
+        
         webViewConfiguration.allowsInlineMediaPlayback = true
         webViewConfiguration.suppressesIncrementalRendering = false
         webViewConfiguration.allowsAirPlayForMediaPlayback = true
         webViewConfiguration.mediaTypesRequiringUserActionForPlayback = []
+        
         if #available(iOS 14.0, *) {
             webViewConfiguration.limitsNavigationsToAppBoundDomains = instanceConfiguration.limitsNavigationsToAppBoundDomains
         }
+        
         if let appendUserAgent = instanceConfiguration.appendedUserAgentString {
             if let appName = webViewConfiguration.applicationNameForUserAgent {
                 webViewConfiguration.applicationNameForUserAgent = "\(appName)  \(appendUserAgent)"
@@ -115,6 +129,7 @@ import Cordova
                 webViewConfiguration.applicationNameForUserAgent = appendUserAgent
             }
         }
+        
         if let preferredContentMode = instanceConfiguration.preferredContentMode {
             var mode = WKWebpagePreferences.ContentMode.recommended
             if preferredContentMode == "mobile" {
@@ -124,6 +139,7 @@ import Cordova
             }
             webViewConfiguration.defaultWebpagePreferences.preferredContentMode = mode
         }
+        
         return webViewConfiguration
     }
 

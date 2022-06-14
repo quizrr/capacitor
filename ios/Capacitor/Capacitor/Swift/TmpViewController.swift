@@ -1,7 +1,9 @@
 import UIKit
 
 internal class TmpViewController: UIViewController {
+    
     var count = 0
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // On iOS 12 viewDidAppear is called when TmpViewController is created and
@@ -13,6 +15,7 @@ internal class TmpViewController: UIViewController {
         } else {
             count += 1
         }
+        
         if count > 1 {
             NotificationCenter.default.post(CapacitorBridge.tmpVCAppeared)
         }

@@ -301,57 +301,12 @@
 		62959AE12524DA7700A3D7F1 /* Capacitor */ = {
 			isa = PBXGroup;
 			children = (
-				0F8F33B127DA980A003F49D6 /* PluginConfig.swift */,
-				62959B0F2524DA7700A3D7F1 /* Capacitor.h */,
-				62959B132524DA7700A3D7F1 /* CAPPlugin.h */,
-				62959B012524DA7700A3D7F1 /* CAPPlugin.m */,
-				62959AE52524DA7700A3D7F1 /* CAPBridgedPlugin.h */,
-				62959B092524DA7700A3D7F1 /* CAPPluginMethod.h */,
-				62959AE82524DA7700A3D7F1 /* CAPPluginMethod.m */,
-				62959AE22524DA7700A3D7F1 /* CAPPluginCall.h */,
-				62959B062524DA7700A3D7F1 /* CAPPluginCall.m */,
-				62959AE62524DA7700A3D7F1 /* CAPPluginCall.swift */,
-				62ADC0C925CB678000E914DE /* PluginCallResult.swift */,
-				621ECCBB2542046400D3D615 /* JSTypes.swift */,
-				621ECCB62542045900D3D615 /* CAPBridgedJSTypes.h */,
-				621ECCB42542045900D3D615 /* CAPBridgedJSTypes.m */,
-				623D68F9254C5037002D01D1 /* KeyPath.swift */,
-				62959AFF2524DA7700A3D7F1 /* JS.swift */,
-				62959AE32524DA7700A3D7F1 /* JSExport.swift */,
-				621ECCD4254205BD00D3D615 /* CAPBridgeProtocol.swift */,
-				621ECCD9254205C400D3D615 /* CapacitorBridge.swift */,
-				62959B142524DA7700A3D7F1 /* CAPBridge.swift */,
-				62959B042524DA7700A3D7F1 /* CAPBridgeViewController.swift */,
-				621ECCE2254206A600D3D615 /* CAPApplicationDelegateProxy.swift */,
-				62959B0A2524DA7700A3D7F1 /* CAPBridgeDelegate.swift */,
-				62E207AD2588234500A78983 /* WebViewDelegationHandler.swift */,
-				625AF1EC258963C700869675 /* WebViewAssetHandler.swift */,
+				62E79C562638AF7500414164 /* assets */,
+				D488539B2853B47B0080752F /* Swift */,
+				D48853992853B4730080752F /* Obj-C */,
 				62959AEA2524DA7700A3D7F1 /* Plugins */,
-				623D6907254C6FDF002D01D1 /* CAPInstanceDescriptor.h */,
-				623D6908254C6FDF002D01D1 /* CAPInstanceDescriptor.m */,
-				623D6913254C7030002D01D1 /* CAPInstanceDescriptor.swift */,
-				623D691B254C7462002D01D1 /* CAPInstanceConfiguration.h */,
-				623D691C254C7462002D01D1 /* CAPInstanceConfiguration.m */,
-				6214934625509C3F006C36F9 /* CAPInstanceConfiguration.swift */,
-				62959B082524DA7700A3D7F1 /* CAPLog.swift */,
-				62959AE72524DA7700A3D7F1 /* CAPFile.swift */,
-				62959B0E2524DA7700A3D7F1 /* TmpViewController.swift */,
-				62959B102524DA7700A3D7F1 /* DocLinks.swift */,
-				62959B152524DA7700A3D7F1 /* CAPNotifications.swift */,
-				62959B072524DA7700A3D7F1 /* CapacitorExtension.swift */,
-				62959B112524DA7700A3D7F1 /* Data+Capacitor.swift */,
-				62FABD1925AE5C01007B3814 /* Array+Capacitor.swift */,
-				62D43AEF2581817500673C24 /* WKWebView+Capacitor.swift */,
-				62D43B642582A13D00673C24 /* WKWebView+Capacitor.m */,
-				2F81F5C726FB7CB400DD35BE /* CAPBridgeViewController+CDVScreenOrientationDelegate.h */,
-				2F81F5C826FB7CB400DD35BE /* CAPBridgeViewController+CDVScreenOrientationDelegate.m */,
-				62959AE92524DA7700A3D7F1 /* UIColor.swift */,
-				62959AFE2524DA7700A3D7F1 /* UIStatusBarManager+CAPHandleTapAction.m */,
 				62959B122524DA7700A3D7F1 /* Info.plist */,
 				62959B8225253A9500A3D7F1 /* Capacitor.modulemap */,
-				373A69C0255C9360000A6F44 /* NotificationHandlerProtocol.swift */,
-				373A69F1255C95D0000A6F44 /* NotificationRouter.swift */,
-				62E79C562638AF7500414164 /* assets */,
 			);
 			path = Capacitor;
 			sourceTree = "<group>";
@@ -407,6 +362,67 @@
 				62E79C572638AF7500414164 /* native-bridge.js */,
 			);
 			path = assets;
+			sourceTree = "<group>";
+		};
+		D48853992853B4730080752F /* Obj-C */ = {
+			isa = PBXGroup;
+			children = (
+				62959B0F2524DA7700A3D7F1 /* Capacitor.h */,
+				621ECCB62542045900D3D615 /* CAPBridgedJSTypes.h */,
+				621ECCB42542045900D3D615 /* CAPBridgedJSTypes.m */,
+				62959AE52524DA7700A3D7F1 /* CAPBridgedPlugin.h */,
+				2F81F5C726FB7CB400DD35BE /* CAPBridgeViewController+CDVScreenOrientationDelegate.h */,
+				2F81F5C826FB7CB400DD35BE /* CAPBridgeViewController+CDVScreenOrientationDelegate.m */,
+				623D691B254C7462002D01D1 /* CAPInstanceConfiguration.h */,
+				623D691C254C7462002D01D1 /* CAPInstanceConfiguration.m */,
+				623D6907254C6FDF002D01D1 /* CAPInstanceDescriptor.h */,
+				623D6908254C6FDF002D01D1 /* CAPInstanceDescriptor.m */,
+				62959B132524DA7700A3D7F1 /* CAPPlugin.h */,
+				62959B012524DA7700A3D7F1 /* CAPPlugin.m */,
+				62959AE22524DA7700A3D7F1 /* CAPPluginCall.h */,
+				62959B062524DA7700A3D7F1 /* CAPPluginCall.m */,
+				62959B092524DA7700A3D7F1 /* CAPPluginMethod.h */,
+				62959AE82524DA7700A3D7F1 /* CAPPluginMethod.m */,
+				62959AFE2524DA7700A3D7F1 /* UIStatusBarManager+CAPHandleTapAction.m */,
+				62D43B642582A13D00673C24 /* WKWebView+Capacitor.m */,
+			);
+			path = "Obj-C";
+			sourceTree = "<group>";
+		};
+		D488539B2853B47B0080752F /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				62FABD1925AE5C01007B3814 /* Array+Capacitor.swift */,
+				621ECCD9254205C400D3D615 /* CapacitorBridge.swift */,
+				62959B072524DA7700A3D7F1 /* CapacitorExtension.swift */,
+				621ECCE2254206A600D3D615 /* CAPApplicationDelegateProxy.swift */,
+				62959B142524DA7700A3D7F1 /* CAPBridge.swift */,
+				62959B0A2524DA7700A3D7F1 /* CAPBridgeDelegate.swift */,
+				621ECCD4254205BD00D3D615 /* CAPBridgeProtocol.swift */,
+				62959B042524DA7700A3D7F1 /* CAPBridgeViewController.swift */,
+				62959AE72524DA7700A3D7F1 /* CAPFile.swift */,
+				6214934625509C3F006C36F9 /* CAPInstanceConfiguration.swift */,
+				623D6913254C7030002D01D1 /* CAPInstanceDescriptor.swift */,
+				62959B082524DA7700A3D7F1 /* CAPLog.swift */,
+				62959B152524DA7700A3D7F1 /* CAPNotifications.swift */,
+				62959AE62524DA7700A3D7F1 /* CAPPluginCall.swift */,
+				62959B112524DA7700A3D7F1 /* Data+Capacitor.swift */,
+				62959B102524DA7700A3D7F1 /* DocLinks.swift */,
+				62959AFF2524DA7700A3D7F1 /* JS.swift */,
+				62959AE32524DA7700A3D7F1 /* JSExport.swift */,
+				621ECCBB2542046400D3D615 /* JSTypes.swift */,
+				623D68F9254C5037002D01D1 /* KeyPath.swift */,
+				373A69C0255C9360000A6F44 /* NotificationHandlerProtocol.swift */,
+				373A69F1255C95D0000A6F44 /* NotificationRouter.swift */,
+				62ADC0C925CB678000E914DE /* PluginCallResult.swift */,
+				0F8F33B127DA980A003F49D6 /* PluginConfig.swift */,
+				62959B0E2524DA7700A3D7F1 /* TmpViewController.swift */,
+				62959AE92524DA7700A3D7F1 /* UIColor.swift */,
+				625AF1EC258963C700869675 /* WebViewAssetHandler.swift */,
+				62E207AD2588234500A78983 /* WebViewDelegationHandler.swift */,
+				62D43AEF2581817500673C24 /* WKWebView+Capacitor.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,7 +510,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "Drifty Co.";
 				TargetAttributes = {
 					50503EDE1FC08594003606DC = {
@@ -712,6 +728,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -776,6 +793,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -913,7 +931,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestsHostApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -936,7 +954,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestsHostApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.capacitorjs.ios.TestsHostApp;
