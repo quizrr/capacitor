@@ -10,7 +10,7 @@
       "hoist": true
     },
     "version": {
-      "allowBranch": "main",
+      "allowBranch": ["main", "range-support"],
       "conventionalCommits": true,
       "createRelease": "github",
       "message": "Release %s",
