@@ -10,12 +10,15 @@
       "hoist": true
     },
     "version": {
-      "allowBranch": ["main", "range-support"],
+      "allowBranch": [
+        "main",
+        "range-support"
+      ],
       "conventionalCommits": true,
       "createRelease": "github",
       "message": "Release %s",
       "tagVersionPrefix": ""
     }
   },
-  "version": "3.4.0"
+  "version": "3.4.1-alpha.0"
 }
